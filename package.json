@@ -1,6 +1,6 @@
 {
   "name": "symfony-routes",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "type": "module",
   "description": "Use typed symfony route endpoints",
   "author": "Michael Cozzolino",
