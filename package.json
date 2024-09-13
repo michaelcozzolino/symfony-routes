@@ -1,47 +1,48 @@
 {
-  "name": "symfony-routes",
-  "version": "1.0.1",
-  "type": "module",
-  "description": "Use typed symfony route endpoints",
-  "author": "Michael Cozzolino",
-  "license": "ISC",
-  "homepage": "https://github.com/michaelcozzolino/symfony-routes",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/michaelcozzolino/symfony-routes.git"
-  },
-  "bugs": {
-    "url": "https://github.com/michaelcozzolino/symfony-routes/issues"
-  },
-  "keywords": [
-    "symfony",
-    "routes",
-    "frontend",
-    "typed-routes"
-  ],
-  "main": "./dist/symfonyRoutes.umd.cjs",
-  "module": "./dist/symfonyRoutes.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/symfonyRoutes.js",
-      "require": "./dist/symfonyRoutes.umd.cjs"
+    "name": "symfony-routes",
+    "version": "1.0.1",
+    "type": "module",
+    "description": "Use typed symfony route endpoints",
+    "author": "Michael Cozzolino",
+    "license": "ISC",
+    "homepage": "https://github.com/michaelcozzolino/symfony-routes",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/michaelcozzolino/symfony-routes.git"
+    },
+    "bugs": {
+        "url": "https://github.com/michaelcozzolino/symfony-routes/issues"
+    },
+    "keywords": [
+        "symfony",
+        "routes",
+        "frontend",
+        "typed-routes"
+    ],
+    "main": "./dist/SymfonyRoutes.umd.cjs",
+    "module": "./dist/SymfonyRoutes.mjs",
+    "types": "./dist/SymfonyRoutes.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/symfonyRoutes.d.ts",
+            "import": "./dist/symfonyRoutes.mjs",
+            "require": "./dist/symfonyRoutes.umd.cjs"
+        }
+    },
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "preview": "vite preview",
+        "test": "vitest"
+    },
+    "devDependencies": {
+        "@types/node": "^22.5.4",
+        "typescript": "^5.6.2",
+        "vite": "^5.4.5",
+        "vite-plugin-dts": "^4.2.1",
+        "vitest": "^2.1.1"
     }
-  },
-  "files": [
-    "dist"
-  ],
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
-    "test": "vitest"
-  },
-  "devDependencies": {
-    "@types/node": "^20.10.6",
-    "typescript": "^5.2.2",
-    "vite": "^5.0.8",
-    "vite-plugin-dts": "^3.7.0",
-    "vitest": "^1.1.1"
-  }
 }
