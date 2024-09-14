@@ -1,6 +1,6 @@
 {
     "name": "symfony-routes",
-    "version": "1.0.1",
+    "version": "2.0.0",
     "type": "module",
     "description": "Use typed symfony route endpoints",
     "author": "Michael Cozzolino",
@@ -19,27 +19,25 @@
         "frontend",
         "typed-routes"
     ],
-    "main": "./dist/SymfonyRoutes.umd.cjs",
-    "module": "./dist/SymfonyRoutes.mjs",
-    "types": "./dist/SymfonyRoutes.d.ts",
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
     "exports": {
         ".": {
-            "types": "./dist/symfonyRoutes.d.ts",
-            "import": "./dist/symfonyRoutes.mjs",
-            "require": "./dist/symfonyRoutes.umd.cjs"
+            "import": "./dist/index.js",
+            "require": "./dist/index.cjs"
         }
     },
     "files": [
         "dist"
     ],
     "scripts": {
-        "dev": "vite",
         "build": "tsc && vite build",
-        "preview": "vite preview",
         "test": "vitest"
     },
     "devDependencies": {
         "@types/node": "^22.5.4",
+        "@vitest/coverage-v8": "^2.1.1",
         "typescript": "^5.6.2",
         "vite": "^5.4.5",
         "vite-plugin-dts": "^4.2.1",
