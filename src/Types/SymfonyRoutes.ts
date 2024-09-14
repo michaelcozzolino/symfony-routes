@@ -3,6 +3,8 @@ export type SymfonyRoute = Readonly<{
     path: string
 }>;
 
-type SymfonyRoutes = Record<string, SymfonyRoute>;
+type SymfonyRoutes<T extends string> = Record<T, SymfonyRoute>;
+
+export type RouteParams = Record<string, string | number>;
 
 export default SymfonyRoutes;

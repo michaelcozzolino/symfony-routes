@@ -7,12 +7,19 @@ import { defineConfig } from 'vite';
 import dts              from 'vite-plugin-dts';
 // https://vitejs.dev/guide/build.html#library-mode
 export default defineConfig({
+    resolve: {
+        alias: {
+            '@': resolve(__dirname, 'src')
+        }
+    },
     build:   {
         lib: {
-            entry:    resolve(__dirname, './src/Types/SymfonyRoutes.ts'),
+            entry:    resolve(__dirname, 'src/index.ts'),
             name:     'symfony-routes',
-            fileName: 'SymfonyRoutes',
+            fileName: 'index',
         },
     },
-    plugins: [dts()],
+    plugins: [dts({
+        insertTypesEntry: true,
+    })],
 });
