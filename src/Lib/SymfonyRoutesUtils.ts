@@ -1,5 +1,5 @@
-import type { RouteParams, SymfonyRoute } from "../Types/SymfonyRoutes.ts";
-import { isObject, isRecord, isString }   from "./TypesUtils.ts";
+import type { RouteParams, SymfonyRoute } from "../Types/SymfonyRoutes";
+import { isObject, isRecord, isString }   from "./TypesUtils";
 
 export const getSymfonyRoutePath = <T extends string>(symfonyRoutes: unknown, routeName: T, parameters?: RouteParams): string => {
     const symfonyRoute: SymfonyRoute = getSymfonyRoute(symfonyRoutes, routeName);
